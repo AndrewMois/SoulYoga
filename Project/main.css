@@ -1,0 +1,472 @@
+/* * {
+    box-sizing: border-box;
+    
+	font-size: 100%;
+} */
+
+html,
+body {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif, Helvetica;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em; */
+
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 0 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Cormorant', serif;
+    color: black;
+    transition: all 0.7s ease;
+    position: relative;
+}
+
+/* idea for the nav animation is taken from CSS-TRICKS (https://css-tricks.com/css-link-hover-effects/). All unknown properties are reviewed */
+nav a::before {
+    content: '';
+    background-color: rgb(182, 152, 90, 60%);
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    /*z index is to lay animation behind the text */
+    transition: all .3s ease-in-out;
+}
+
+
+nav a:hover::before {
+    bottom: 0;
+    height: 100%;
+    ;
+}
+
+.header--first-row {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    /* grid-row: 2/11;
+    grid-column: 1; */
+}
+
+.header--second-row {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
+.plx-img1 {
+    background-image: url(images/landing.jpg);
+    width: 100%;
+    height: calc(100vh - 100px);
+    /* viewport height - hight of the header, so test always in the center */
+    background-position: center;
+    text-align: center;
+    padding-top: 105px;
+    /* to get it from the navigation bar (maybe there is more correct way, but that's what I came up with) */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    /* for centering the name on the picture */
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    /* background-color: rgb(255, 250, 237); */
+    padding-bottom: 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    font-weight: 600;
+    padding-bottom: 20px;
+    font-family: 'Cormorant', serif;
+}
+
+section p {
+    font-size: 22px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.plx-img2 {
+    background-image: url(images/pic1.jpg);
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.plx-img1 h1 {
+    font-size: 20vw;
+    line-height: 15px;
+    word-spacing: -10vw;
+    text-align: center;
+    align-items: baseline;
+    font-family: 'Cormorant', serif;
+}
+
+
+/* body > main > div.plx-img1 h1:nth-child(2) {
+    font-size: 25vw;
+    grid-row: 2/3;
+    grid-column: 2/4;
+    display: contents;
+} */
+/* h1 span:nth-of-type(1) {
+
+} */
+
+h1 span:nth-of-type(2) {
+
+    bottom: 50px;
+    color: rgb(182, 152, 90, 60%);
+    font-family: 'Cormorant', serif;
+}
+
+.plx-img3 {
+    background-image: url(images/temple.jpg);
+    width: 100%;
+    height: 70vh;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+button,
+input[type='submit'] {
+    background-color: rgb(182, 152, 90);
+    border: 2px solid rgb(182, 152, 90);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif, Helvetica;
+    cursor: pointer;
+    transition-duration: 0.7s;
+    margin: 20px 20px;
+}
+
+
+
+button:hover,
+input[type='submit']:hover {
+    background-color: white;
+    border: 2px solid rgb(182, 152, 90);
+    color: black;
+}
+
+footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
+    border-top: 2px solid rgb(182, 152, 90);
+    font-size: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 3vh 0 3vh 0;
+    gap: 2vh;
+}
+
+footer p {
+    margin: 0;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.card {
+    width: 40vw;
+}
+
+.card p {
+    margin: 10px;
+}
+
+.golden {
+
+    color: rgb(182, 152, 90);
+
+}
+
+.number-left {
+    color: rgb(182, 152, 90);
+    float: left;
+    position: absolute;
+    margin: 0;
+    left: 2.5vw;
+    font-family: 'Cormorant', serif;
+    font-size: 5rem;
+    opacity: 70%;
+}
+
+.number-right {
+    color: rgb(182, 152, 90);
+    float: right;
+    position: absolute;
+    margin: 0;
+    left: 2.5vw;
+    font-family: 'Cormorant', serif;
+    font-size: 5rem;
+    opacity: 70%;
+}
+/* FOOTER SETTINGS */
+footer p,
+address{
+    font-size: 16px;
+    font-style: inherit;
+}
+
+footer h3,
+footer a {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: rgb(182, 152, 90);
+}
+
+#footer-coname {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    justify-self: start;
+
+}
+
+#footer-description {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-self: start;
+}
+
+#footer-schedule {
+    grid-row: 1/2;
+    grid-column: 3/4;
+}
+
+#footer-gallery {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    align-self: flex-start;
+}
+
+#footer-contact {
+    grid-row: 1/2;
+    grid-column: 4/5;
+    justify-self: start;
+}
+
+#footer-address {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    justify-self: start;
+}
+
+#email {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#footer-join {
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+
+#footer-socials {
+    grid-row: 2/3;
+    grid-column: 5/6;
+    align-self: flex-start;
+}
+
+#footer-join {
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+
+#footer-author {
+    grid-row: 2/3;
+    grid-column: 5/6;
+    align-self: flex-end;
+    justify-self: center;
+    text-align: center;
+}
+
+/* Specific CCS for SCHEDULE page */
+.plx-img-schedule,
+.plx-img-contact,
+.plx-img-gallery {
+
+    background-image: url(images/pic4.jpg);
+    /* background picture for schedule page */
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    /* for centering the name on the picture */
+    align-items: center;
+    justify-content: center;
+    padding-top: 105px;
+}
+
+
+
+.plx-img-schedule h1,
+.plx-img-contact h1,
+.plx-img-gallery h1 {
+    font-size: 15vw;
+    line-height: 15px;
+    text-align: center;
+    align-items: baseline;
+    font-family: 'Cormorant', serif;
+}
+/* Schecule TABLE settings */
+table {
+    margin: 0 auto 3vw auto;
+    width: 90%;
+}
+table, th, td, tr {
+  
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    font-size: 16px;
+}
+th {
+    background-color: rgb(182, 152, 90);
+}
+
+td { 
+    height: 20px;
+}
+
+tr:hover {background-color: rgb(182, 152, 90, 50%)}
+
+table .time {
+    /* border-right: 1px solid black; */
+    background-color: rgb(182, 152, 90, 50%);
+}
+
+.trainer-name{
+    color: rgb(182, 152, 90);
+    font-weight: 700;
+    display: block;
+    /* to move all names to the next line */
+}
+#book-lesson-button{
+    margin-top: 0px;
+    padding: 10px 20px 10px 20px;
+
+}
+.schedule {
+    text-align: center;
+    /* to center button */
+}
+
+/* CONTACT PAGE SETTINGS */
+
+.plx-img-contact {
+    background-image: url(images/pic3.jpg);
+        /* background picture for contact page */
+}
+input[type='text'], 
+input[type='email'],
+input[type='number'] 
+{
+    width: 50%;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+
+label {
+    display: inline-block; /*to remember: by default label is inline, which won't take height and width*/
+    width: 250px;
+    font-size: 22px;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5rem;
+}
+address.contact-address,
+address.contact-address a{
+    font-style: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    color: black;
+    line-height: 1.5rem;
+}
+
+/* GALLERY PAGE SETTINGS */
+.plx-img-gallery {
+    background-image: url(images/pic1.jpg);
+}
+
+section.gallery{
+display: flex;
+flex-wrap: wrap;
+justify-content:center;
+
+}
+
+section.gallery img {
+    aspect-ratio: 3/2;
+    height: 300px;
+    margin: 3vh;
+    transition: 0.7s;
+}
+
+section.gallery img:hover {
+    transform: scale(1.1);
+  box-shadow: 3px 3px 4px #888888;
+}
+
+div.center{
+    text-align: center;
+}
