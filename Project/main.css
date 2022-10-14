@@ -374,13 +374,14 @@ table, th, td, tr {
     text-align: center;
     table-layout: fixed;
     font-size: 16px;
+    height: 5vh;
 }
 th {
     background-color: rgb(182, 152, 90);
 }
 
-td { 
-    height: 20px;
+tr { 
+    
 }
 
 tr:hover {background-color: rgb(182, 152, 90, 50%)}
