@@ -131,17 +131,6 @@ section p {
     font-family: 'Cormorant', serif;
 }
 
-
-/* body > main > div.plx-img1 h1:nth-child(2) {
-    font-size: 25vw;
-    grid-row: 2/3;
-    grid-column: 2/4;
-    display: contents;
-} */
-/* h1 span:nth-of-type(1) {
-
-} */
-
 h1 span:nth-of-type(2) {
 
     bottom: 50px;
@@ -243,7 +232,7 @@ footer p {
     font-size: 5rem;
     opacity: 70%;
 }
-/* FOOTER SETTINGS */
+                                                    /* FOOTER SETTINGS */
 footer p,
 address{
     font-size: 16px;
@@ -330,7 +319,7 @@ footer a:hover {
     text-align: center;
 }
 
-/* Specific CCS for SCHEDULE page */
+                                                        /* SCHEDULE PAGE SETTINGS */
 .plx-img-schedule,
 .plx-img-contact,
 .plx-img-gallery {
@@ -407,7 +396,7 @@ table .time {
     /* to center button */
 }
 
-/* CONTACT PAGE SETTINGS */
+                                                    /* CONTACT PAGE SETTINGS */
 
 .plx-img-contact {
     background-image: url(images/pic3.jpg);
