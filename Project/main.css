@@ -153,7 +153,8 @@ h1 span:nth-of-type(2) {
 }
 
 button,
-input[type='submit'] {
+input[type='submit'],
+a.button {
     background-color: rgb(182, 152, 90);
     border: 2px solid rgb(182, 152, 90);
     border-radius: 10px;
@@ -172,7 +173,8 @@ input[type='submit'] {
 
 
 button:hover,
-input[type='submit']:hover {
+input[type='submit']:hover,
+a.button:hover {
     background-color: white;
     border: 2px solid rgb(182, 152, 90);
     color: black;
@@ -389,11 +391,7 @@ table .time {
     display: block;
     /* to move all names to the next line */
 }
-#book-lesson-button{
-    margin-top: 0px;
-    padding: 10px 20px 10px 20px;
 
-}
 .schedule {
     text-align: center;
     /* to center button */
@@ -441,21 +439,21 @@ address.contact-address a{
     background-image: url(images/pic1.jpg);
 }
 
-section.gallery{
+div.gallery{
 display: flex;
 flex-wrap: wrap;
 justify-content:center;
 
 }
 
-section.gallery img {
+div.gallery img {
     aspect-ratio: 3/2;
     height: 300px;
     margin: 3vh;
     transition: 0.7s;
 }
 
-section.gallery img:hover {
+div.gallery img:hover {
     transform: scale(1.1);
   box-shadow: 3px 3px 4px #888888;
 }
